@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creatures>
+	<creature>
+		<Name>Dragon</Name>
+		<HitPoint>150</HitPoint>
+		<Attack>
+			<Name>Steel Shield</Name>
+			<Hit>20</Hit>
+			<Range>20</Range>
+		</Attack>
+		<Defence>
+			<Name>Steel Shield</Name>
+			<ReduceHitPoint>20</ReduceHitPoint>
+		</Defence>
+	</creature>
+
+</creatures>
