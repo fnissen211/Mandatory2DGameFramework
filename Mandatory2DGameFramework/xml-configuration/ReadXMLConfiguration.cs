@@ -12,6 +12,11 @@ namespace Mandatory2DGameFramework.xml_configuration
 {
     public class ReadXMLConfiguration
     {
+        /// <summary>
+        /// Reads an XML file from a given path and returns an XML document
+        /// </summary>
+        /// <param name="path">The path where the file that will be read lies.</param>
+        /// <returns>Returns the path-file to a XMLDocument or null if it wasn't a XMLDocument</returns>
         public XmlDocument? ReadXMLDocument(string path)
         {
             XmlDocument configDoc = new XmlDocument();
@@ -26,6 +31,11 @@ namespace Mandatory2DGameFramework.xml_configuration
             return configDoc;
         }
 
+        /// <summary>
+        /// Takes an xml document and parses the creatures from the XML document and return a list of creatures
+        /// </summary>
+        /// <param name="xmlDoc">An XML document</param>
+        /// <returns>A list of creatures</returns>
         public List<Creature>? ParseCreatures(XmlDocument xmlDoc)
         {
             List<Creature> creatures = new List<Creature>();
