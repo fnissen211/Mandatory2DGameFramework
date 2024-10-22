@@ -1,5 +1,6 @@
 ﻿using Mandatory2DGameFramework.model.attack;
 using Mandatory2DGameFramework.model.creatures;
+using Mandatory2DGameFramework.model.creatures.player;
 using Mandatory2DGameFramework.model.defence;
 using System;
 using System.Collections.Generic;
@@ -45,17 +46,15 @@ namespace Mandatory2DGameFramework.xml_configuration
             {
                 Creature creature = new Creature();
 
-                // Access child nodes and map them to the Creature class
                 creature.Name = creatureNode["Name"]?.InnerText;
                 creature.HitPoint = int.Parse(creatureNode["HitPoint"]?.InnerText ?? "0");
 
-                // Access nested nodes inside <Attack> and <Defence>
                 var attackNode = creatureNode["Attack"];
                 creature.Attack = new AttackItem
                 {
                     Name = attackNode?["Name"]?.InnerText ?? "Unknown Item",
                     Hit = int.Parse(attackNode?["Hit"]?.InnerText ?? "0"),
-                    Range = int.Parse(attackNode?["Range"]?.InnerText ?? "0")
+                    Range = int.Parse(attackNode?["Range"]?.Value ?? "0")
                 };
 
                 var defenceNode = creatureNode["Defence"];
