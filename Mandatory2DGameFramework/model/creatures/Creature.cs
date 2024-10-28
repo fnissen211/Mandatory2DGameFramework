@@ -9,45 +9,31 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures
 {
-    public class Creature
+    public abstract class Creature : ICreature
     {
         public string Name { get; set; }
         public int HitPoint { get; set; }
 
-
-        // Todo consider how many attack / defence weapons are allowed
-        public AttackItem? Attack { get; set; }
-        public DefenceItem? Defence { get; set; }
-
-        public Creature()
+        protected Creature(string name, int hitPoint)
         {
-            Name = string.Empty;
-            HitPoint = 100;
-
-            Attack = null;
-            Defence = null;
-
+            Name = name;
+            HitPoint = hitPoint;
         }
 
-        public int Hit()
+        public abstract int Hit();
+
+        public virtual void Loot(WorldObject obj)
         {
-            throw new NotImplementedException();
+            //TODO: Implement loot system
         }
 
-        public void ReceiveHit(int hit)
+        public virtual void ReceiveHit(int hit)
         {
-            throw new NotImplementedException();
-        }
-
-        public void Loot(WorldObject obj)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        public override string ToString()
-        {
-            return $"{{{nameof(Name)}={Name}, {nameof(HitPoint)}={HitPoint.ToString()}, {nameof(Attack)}={Attack}, {nameof(Defence)}={Defence}}}";
+            HitPoint -= hit;
+            if (HitPoint < 0)
+            {
+                HitPoint = 0;
+            }
         }
     }
 }

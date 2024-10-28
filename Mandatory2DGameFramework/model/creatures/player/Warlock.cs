@@ -11,6 +11,10 @@ namespace Mandatory2DGameFramework.model.creatures.player
 {
     public class Warlock : PlayerCreature
     {
+        public Warlock(string name) : base(name)
+        {
+        }
+
         public override int Hit()
         {
             throw new NotImplementedException();

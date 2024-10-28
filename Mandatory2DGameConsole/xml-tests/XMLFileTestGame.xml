@@ -4,7 +4,7 @@
 		<Name>Dragon</Name>
 		<HitPoint>150</HitPoint>
 		<Attack>
-			<Name>Steel Shield</Name>
+			<Name>Sword</Name>
 			<Hit>20</Hit>
 			<Range>20</Range>
 		</Attack>

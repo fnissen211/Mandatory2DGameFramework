@@ -1,4 +1,5 @@
-﻿using Mandatory2DGameFramework.model.creatures.player;
+﻿using Mandatory2DGameFramework.model.creatures.monster;
+using Mandatory2DGameFramework.model.creatures.player;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Mandatory2DGameFramework.model.creatures
 {
     public static class CreatureFactory
     {
-        public static ICreature CreateCreature(CreaturePlayer type, CreatureMonster? creatureMonster = null)
+        public static ICreature CreateCreaturePlayer(CreaturePlayer type)
         {
             switch (type)
             {
@@ -20,6 +21,21 @@ namespace Mandatory2DGameFramework.model.creatures
                     return new Mage(); // Assuming you have a Mage class that implements ICreature
                 case CreaturePlayer.Warlock:
                     return new Warlock();
+                default:
+                    throw new ArgumentException("Invalid creature type or missing monster type");
+            }
+        }
+
+        public static ICreature CreateCreatureMonster(CreatureMonster type)
+        {
+            switch (type)
+            {
+                case CreatureMonster.Dragon:
+                    return new Dragon();
+                case CreatureMonster.Boar:
+                    return new Boar();
+                case CreatureMonster.Raptor:
+                    return new Raptor();
                 default:
                     throw new ArgumentException("Invalid creature type or missing monster type");
             }

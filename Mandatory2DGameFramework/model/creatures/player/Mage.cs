@@ -11,6 +11,11 @@ namespace Mandatory2DGameFramework.model.creatures.player
 {
     public class Mage : PlayerCreature
     {
+        public Mage(string name) : base(name)
+        {
+
+        }
+
         public override int Hit()
         {
             throw new NotImplementedException();

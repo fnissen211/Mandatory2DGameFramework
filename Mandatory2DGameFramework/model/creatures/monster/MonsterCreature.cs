@@ -9,25 +9,24 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures.player
 {
-    public abstract class MonsterCreature : ICreature
+    public abstract class MonsterCreature : Creature
     {
-        public string Name { get; set; }
-        public int HitPoint { get; set; }
-
-        public MonsterCreature()
+        public MonsterCreature(string name, int hitPoint) : base(name, hitPoint)
         {
-            Name = string.Empty;
-            HitPoint = 100;
         }
 
-        public abstract int Hit();
+        public MonsterCreature() : this(string.Empty, 100)
+        {
+        }
 
-        public virtual void Loot(WorldObject obj)
+        public abstract override int Hit();
+
+        public override void Loot(WorldObject obj)
         {
             throw new NotImplementedException();
         }
 
-        public virtual void ReceiveHit(int hit)
+        public override void ReceiveHit(int hit)
         {
             HitPoint -= hit;
         }

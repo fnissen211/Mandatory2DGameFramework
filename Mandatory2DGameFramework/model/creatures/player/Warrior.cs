@@ -11,6 +11,10 @@ namespace Mandatory2DGameFramework.model.creatures.player
 {
     public class Warrior : PlayerCreature
     {
+        public Warrior(string name) : base(name)
+        {
+        }
+
         public override int Hit()
         {
             throw new NotImplementedException();

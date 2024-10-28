@@ -21,9 +21,6 @@ namespace Mandatory2DGameFramework.model.creatures
     }
     public interface ICreature
     {
-        string Name { get; set; }
-        int HitPoint { get; set; }
-
         int Hit();
         void ReceiveHit(int hit);
         void Loot(WorldObject obj);
