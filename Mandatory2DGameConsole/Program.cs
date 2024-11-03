@@ -15,7 +15,7 @@ Console.WriteLine("Hello, Frederik!");
 
 foreach (var creature in creatures)
 {
-    Console.WriteLine(creature.ToString());
+    Console.WriteLine(creature);
 }
 
 Console.ReadKey();

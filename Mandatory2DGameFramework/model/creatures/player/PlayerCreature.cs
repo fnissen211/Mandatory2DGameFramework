@@ -11,8 +11,8 @@ namespace Mandatory2DGameFramework.model.creatures.player
 {
     public abstract class PlayerCreature : Creature
     {
-        public AttackItem? Attack { get; set; }
-        public DefenceItem? Defence { get; set; }
+        public abstract AttackItem? Attack { get; set; }
+        public abstract DefenceItem? Defence { get; set; }
 
         public PlayerCreature(string name) : base(name, 100)
         {

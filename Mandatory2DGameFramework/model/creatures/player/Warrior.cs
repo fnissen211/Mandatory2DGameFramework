@@ -11,6 +11,9 @@ namespace Mandatory2DGameFramework.model.creatures.player
 {
     public class Warrior : PlayerCreature
     {
+        public override AttackItem? Attack { get; set; }
+        public override DefenceItem? Defence { get; set; }
+
         public Warrior(string name) : base(name)
         {
         }
@@ -18,6 +21,11 @@ namespace Mandatory2DGameFramework.model.creatures.player
         public override int Hit()
         {
             throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return $"Warrior Name: {Name}, HitPoints: {HitPoint}, Attack: {Attack?.Name ?? "None"}, Defence: {Defence?.Name ?? "None"}";
         }
     }
 }

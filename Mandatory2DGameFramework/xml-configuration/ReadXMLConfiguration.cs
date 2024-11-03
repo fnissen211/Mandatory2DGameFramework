@@ -5,12 +5,14 @@ using Mandatory2DGameFramework.model.defence;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
 namespace Mandatory2DGameFramework.xml_configuration
 {
+    //TODO: Implement the ReadXMLConfiguration class and make a gameconfiguration class
     public class ReadXMLConfiguration
     {
         /// <summary>
@@ -40,31 +42,72 @@ namespace Mandatory2DGameFramework.xml_configuration
         public List<Creature>? ParseCreatures(XmlDocument xmlDoc)
         {
             List<Creature> creatures = new List<Creature>();
-            XmlNodeList? creatureNodes = xmlDoc.SelectNodes("//creature");
+            XmlNodeList? playerCreatureNodes = xmlDoc.SelectNodes("//playerCreature");
+            XmlNodeList? monsterCreatureNodes = xmlDoc.SelectNodes("//monsterCreature");
 
-            foreach (XmlNode creatureNode in creatureNodes)
+            foreach (XmlNode creatureNode in monsterCreatureNodes)
             {
-                Creature creature = new Creature();
+                string? classText = creatureNode["Class"]?.InnerText;
+                if (string.IsNullOrEmpty(classText))
+                {
+                    // TODO: Handle the case where Class is missing or empty
+                    continue;
+                }
+                CreatureMonster monsterClass = (CreatureMonster)Enum.Parse(
+                    typeof(CreatureMonster), creatureNode["Class"]?.InnerText);
 
-                creature.Name = creatureNode["Name"]?.InnerText;
-                creature.HitPoint = int.Parse(creatureNode["HitPoint"]?.InnerText ?? "0");
+                MonsterCreature monster = (MonsterCreature)CreatureFactory.CreateCreatureMonster(monsterClass);
+                creatures.Add(monster);
+
+            }
+
+            foreach (XmlNode creatureNode in playerCreatureNodes)
+            {
+                string? classText = creatureNode["Class"]?.InnerText;
+                if (string.IsNullOrEmpty(classText))
+                {
+                    // TODO: Handle the case where Class is missing or empty
+                    continue;
+                }
+
+                CreaturePlayer playerClass = (CreaturePlayer)Enum.Parse(
+                    typeof(CreaturePlayer), creatureNode["Class"]?.InnerText);
+                string? playerName = creatureNode["Name"]?.InnerText;
 
                 var attackNode = creatureNode["Attack"];
-                creature.Attack = new AttackItem
+                AttackItem? playerAttackItem = null;
+
+                if (attackNode != null)
                 {
-                    Name = attackNode?["Name"]?.InnerText ?? "Unknown Item",
-                    Hit = int.Parse(attackNode?["Hit"]?.InnerText ?? "0"),
-                    Range = int.Parse(attackNode?["Range"]?.Value ?? "0")
-                };
+                    AttackItem attackItem = new AttackItem
+                    {
+                        Name = attackNode["Name"]?.InnerText ?? "Unknown Item",
+                        Hit = int.Parse(attackNode["Hit"]?.InnerText ?? "0"),
+                        Range = int.Parse(attackNode["Range"]?.InnerText ?? "0")
+                    };
+                    playerAttackItem = attackItem;
+                }
 
                 var defenceNode = creatureNode["Defence"];
-                creature.Defence = new DefenceItem
-                {
-                    Name = defenceNode?["Name"]?.InnerText ?? "Unknown Item",
-                    ReduceHitPoint = int.Parse(defenceNode?["ReduceHitPoint"]?.InnerText ?? "0")
-                };
+                DefenceItem? playerDefenceItem = null;
 
-                creatures.Add(creature);
+                
+                if (defenceNode != null)
+                {
+                    DefenceItem defenceItem = new DefenceItem
+                    {
+                        Name = defenceNode["Name"]?.InnerText ?? "Unknown Item",
+                        ReduceHitPoint = int.Parse(defenceNode["Hit"]?.InnerText ?? "0")
+                    };
+                    playerDefenceItem = defenceItem;
+                }
+
+                PlayerCreature player = (PlayerCreature)CreatureFactory.CreateCreaturePlayer(playerClass, playerName);
+                
+                player.Attack = playerAttackItem;
+                player.Defence = playerDefenceItem;
+
+                creatures.Add(player);
             }
             return creatures;
         }
