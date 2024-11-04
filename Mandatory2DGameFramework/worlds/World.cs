@@ -56,8 +56,12 @@ namespace Mandatory2DGameFramework.worlds
             foreach (XmlNode actionNode in actionNodes) {
                 string? actionAttacker = actionNode["Attacker"]?.InnerText;
                 string? actionReceiver = actionNode["Receiver"]?.InnerText;
+
                 string? actionPlayer = actionNode["Player"]?.InnerText;
                 string? actionLoot = actionNode["WorldObject"]?.InnerText;
+
+                string? actionPlayerMove = actionNode["PlayerMove"]?.InnerText;
+                string? actionMove = actionNode["Move"]?.InnerText;
 
                 if (!string.IsNullOrEmpty(actionAttacker) && !string.IsNullOrEmpty(actionReceiver)) {
                     Creature? attacker = _creatures.Find(c => c.Name == actionAttacker);
@@ -80,6 +84,39 @@ namespace Mandatory2DGameFramework.worlds
                         Console.WriteLine($"{player.Name} has looted {loot.Name}!");
                     } else {
                         MyLogger.Instance.LogError("Player or loot item not found in the lists");
+                    }
+                } else if(!string.IsNullOrEmpty(actionPlayerMove) && !string.IsNullOrEmpty(actionMove)) {
+                    Creature? player = _creatures.Find(c => c.Name == actionPlayerMove);
+                    if (player != null)
+                    {
+                        if (actionMove == "+Y")
+                        {
+                            player.Move(true, null);
+                            Console.WriteLine($"Moved player up. New position: ({player.X},{player.Y})");
+                        }
+                        else if (actionMove == "-Y")
+                        {
+                            player.Move(false, null);
+                            Console.WriteLine($"Moved player down. New position: ({player.X},{player.Y})");
+                        }
+                        else if (actionMove == "-X")
+                        {
+                            player.Move(null, false);
+                            Console.WriteLine($"Moved player left. New position: ({player.X},{player.Y})");
+                        }
+                        else if (actionMove == "+X")
+                        {
+                            player.Move(null, true);
+                            Console.WriteLine($"Moved player right. New position: ({player.X},{player.Y})");
+                        }
+                        else
+                        {
+                            MyLogger.Instance.LogError("Invalid move action in XML file");
+                        }
+                    }
+                    else
+                    {
+                        MyLogger.Instance.LogError("Player not found in the list of creatures");
                     }
                 } else {
                     MyLogger.Instance.LogError("Invalid action configuration in XML file");

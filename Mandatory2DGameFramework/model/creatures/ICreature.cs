@@ -24,5 +24,6 @@ namespace Mandatory2DGameFramework.model.creatures
         int Hit();
         void ReceiveHit(int hit);
         void Loot(WorldObject obj);
+        void Move(bool? x, bool? y);
     }
 }

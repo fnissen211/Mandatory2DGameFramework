@@ -52,5 +52,31 @@ namespace Mandatory2DGameFramework.model.creatures
                 HitPoint = 0;
             }
         }
+
+        /// <summary>
+        /// A method for moving the creature
+        /// </summary>
+        /// <param name="x">Can be true, false or null</param>
+        /// <param name="y">Can be true, false or null</param>
+        public virtual void Move(bool? x, bool? y)
+        {
+            if (x == true)
+            {
+                X++;
+            }
+            else if (x == false)
+            {
+                X--;
+            }
+
+            if (y == true)
+            {
+                Y++;
+            }
+            else if (y == false)
+            {
+                Y--;
+            }
+        }
     }
 }

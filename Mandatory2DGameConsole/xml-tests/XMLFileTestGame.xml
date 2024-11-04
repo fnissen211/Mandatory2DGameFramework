@@ -130,6 +130,22 @@
 			<Player>Frederik</Player>
 			<WorldObject>Sword of Destiny</WorldObject>
 		</action>
+		<action>
+			<PlayerMove>Frederik</PlayerMove>
+			<Move>+X</Move>
+		</action>
+		<action>
+			<PlayerMove>Frederik</PlayerMove>
+			<Move>-X</Move>
+		</action>
+		<action>
+			<PlayerMove>Frederik</PlayerMove>
+			<Move>+Y</Move>
+		</action>
+		<action>
+			<PlayerMove>Frederik</PlayerMove>
+			<Move>-Y</Move>
+		</action>
 
 	</actions>
 </gameConfig>
