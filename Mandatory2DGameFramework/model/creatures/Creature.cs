@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures
 {
-    // TODO: Add creature position
-    //TODO: XML Documentation
+    /// <summary>
+    /// Superclass for creating creatures
+    /// </summary>
     public abstract class Creature : ICreature
     {
         public string Name { get; set; }
@@ -36,7 +37,7 @@ namespace Mandatory2DGameFramework.model.creatures
         /// <param name="obj">A worldobject</param>
         public virtual void Loot(WorldObject obj)
         {
-            //TODO: Implement loot system
+            
         }
 
         /// <summary>

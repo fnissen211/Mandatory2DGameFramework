@@ -7,16 +7,19 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures.monster
 {
-    //TODO: XML Documentation
+    /// <summary>
+    /// Class for creating a Raptor monster
+    /// </summary>
     public class Raptor : MonsterCreature
     {
         public Raptor() : base("Raptor", 80)
         {
             
         }
+
         public override int Hit()
         {
-            throw new NotImplementedException();
+            return 10;
         }
 
         public override string ToString()

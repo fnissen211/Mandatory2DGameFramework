@@ -1,4 +1,5 @@
-﻿using Mandatory2DGameFramework.model.attack;
+﻿using Mandatory2DGameFramework.logging;
+using Mandatory2DGameFramework.model.attack;
 using Mandatory2DGameFramework.model.creatures;
 using Mandatory2DGameFramework.model.creatures.player;
 using Mandatory2DGameFramework.model.defence;
@@ -6,6 +7,7 @@ using Mandatory2DGameFramework.worlds;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +15,9 @@ using System.Xml;
 
 namespace Mandatory2DGameFramework.xml_configuration
 {
-    //TODO: Implement the ReadXMLConfiguration class and make a gameconfiguration class
-    //TODO: XML Documentation
+    /// <summary>
+    /// Class for reading an XML configuration file
+    /// </summary>
     public class ReadXMLConfiguration
     {
         /// <summary>
@@ -54,7 +57,7 @@ namespace Mandatory2DGameFramework.xml_configuration
                 string? classText = creatureNode["Class"]?.InnerText;
                 if (string.IsNullOrEmpty(classText))
                 {
-                    // TODO: Handle the case where Class is missing or empty
+                    MyLogger.Instance.LogError("Class is missing or empty");
                     continue;
                 }
                 CreatureMonster monsterClass = (CreatureMonster)Enum.Parse(
@@ -70,7 +73,7 @@ namespace Mandatory2DGameFramework.xml_configuration
                 string? classText = creatureNode["Class"]?.InnerText;
                 if (string.IsNullOrEmpty(classText))
                 {
-                    // TODO: Handle the case where Class is missing or empty
+                    MyLogger.Instance.LogError("Class is missing or empty");
                     continue;
                 }
 

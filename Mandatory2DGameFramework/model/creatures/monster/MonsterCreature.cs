@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures.player
 {
-    //TODO: XML Documentation
+    /// <summary>
+    /// An abstract class for creating monster creatures
+    /// </summary>
     public abstract class MonsterCreature : Creature
     {
 
@@ -29,11 +31,10 @@ namespace Mandatory2DGameFramework.model.creatures.player
         /// </returns>
         public abstract override int Hit();
 
-        public override void Loot(WorldObject obj)
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// A method that will be implemented in the subclasses, for receiving a hit from another creature
+        /// </summary>
+        /// <param name="hit">An integer that is the value of the hit</param>
         public override void ReceiveHit(int hit)
         {
             HitPoint -= hit;

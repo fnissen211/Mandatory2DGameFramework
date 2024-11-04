@@ -51,9 +51,6 @@
 		</monsterCreature>
 	</creatures>
 
-
-
-
 	<worldObjects>
 		<worldObject>
 			<Name>Wall</Name>
@@ -79,4 +76,60 @@
 			<Y>14</Y>
 		</worldObject>
 	</worldObjects>
+
+	<actions>
+		<action>
+			<Attacker>Knud</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
+			<Attacker>Raptor</Attacker>
+			<Receiver>Knud</Receiver>
+		</action>
+		<action>
+			<Attacker>Knud</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
+			<Attacker>Raptor</Attacker>
+			<Receiver>Knud</Receiver>
+		</action>
+		<action>
+			<Attacker>Knud</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
+			<Attacker>Knud</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
+			<Attacker>Knud</Attacker>
+			<Receiver></Receiver>
+		</action>
+		<action>
+			<Attacker>Peter Plys</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
+			<Attacker>Raptor</Attacker>
+			<Receiver>Knud</Receiver>
+		</action>
+		<action>
+			<Attacker>Boar</Attacker>
+			<Receiver>Knud</Receiver>
+		</action>
+		<action>
+			<Attacker>Dragon</Attacker>
+			<Receiver>Knud</Receiver>
+		</action>
+		<action>
+			<Attacker>Frederik</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
+			<Player>Frederik</Player>
+			<WorldObject>Sword of Destiny</WorldObject>
+		</action>
+
+	</actions>
 </gameConfig>

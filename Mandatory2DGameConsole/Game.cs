@@ -42,13 +42,19 @@ namespace Mandatory2DGameConsole
             Console.WriteLine(world);
             Console.WriteLine("Game configured successfully.");
 
+            Console.WriteLine("Configuring Actions...");
+
+            world.ParseActions(xmlDoc);
+
         }
+
 
         /// <summary>
         /// Starts the game
         /// </summary>
         public void StartGame()
         {
+            Console.WriteLine("Starting game...");
             ConfigureGame();
         }
     }

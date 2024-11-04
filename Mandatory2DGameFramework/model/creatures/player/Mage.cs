@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures.player
 {
-    //TODO: XML Documentation
+    /// <summary>
+    /// Mage class that inherits from PlayerCreature
+    /// </summary>
     public class Mage : PlayerCreature
     {
         public override AttackItem? Attack { get; set; }
@@ -21,7 +23,7 @@ namespace Mandatory2DGameFramework.model.creatures.player
 
         public override int Hit()
         {
-            throw new NotImplementedException();
+            return 10;
         }
 
         public override string ToString()

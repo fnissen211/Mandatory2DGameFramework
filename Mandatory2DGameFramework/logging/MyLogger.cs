@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.logging
 {
-    // TODO: Create the MyLogger class and make it static
     /// <summary>
     /// This class is a singleton class that is used for logging information, warnings and errors
     /// </summary>
@@ -39,21 +38,13 @@ namespace Mandatory2DGameFramework.logging
         }
 
         /// <summary>
-        /// This method adds a listener to the TraceSource
-        /// </summary>
-        /// <param name="listener">The listener that needs to be added</param>
-        public void AddListener(TraceListener listener)
-        {
-            _traceSource.Listeners.Add(listener);
-        }
-
-        /// <summary>
         /// This method removes a listener from the TraceSource
         /// </summary>
         /// <param name="listener">The listener that needs to be added</param>
         public void RemoveListener(TraceListener listener)
         {
             _traceSource.Listeners.Remove(listener);
+            _traceSource.Flush();
         }
 
         /// <summary>
@@ -63,6 +54,7 @@ namespace Mandatory2DGameFramework.logging
         public void LogInformation(string message)
         {
             _traceSource.TraceEvent(TraceEventType.Information, 0, message);
+            _traceSource.Flush();
         }
 
         /// <summary>
@@ -71,7 +63,8 @@ namespace Mandatory2DGameFramework.logging
         /// <param name="message">The message that needs to be logged</param>
         public void LogWarning(string message) 
         {
-            _traceSource.TraceEvent(TraceEventType.Warning, 0, message);
+            _traceSource.TraceEvent(TraceEventType.Warning, 100, message);
+            _traceSource.Flush();
         }
 
         /// <summary>
@@ -80,7 +73,8 @@ namespace Mandatory2DGameFramework.logging
         /// <param name="message">The message that needs to be logged</param>
         public void LogError(string message) 
         {
-            _traceSource.TraceEvent(TraceEventType.Error, 0, message);
+            _traceSource.TraceEvent(TraceEventType.Error, 400, message);
+            _traceSource.Flush();
         }
 
         /// <summary>

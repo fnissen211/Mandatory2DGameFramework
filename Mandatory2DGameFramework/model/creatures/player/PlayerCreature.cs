@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures.player
 {
-    //TODO: XML Documentation
+    /// <summary>
+    /// Class for creating player creatures
+    /// </summary>
     public abstract class PlayerCreature : Creature
     {
         public abstract AttackItem? Attack { get; set; }
         public abstract DefenceItem? Defence { get; set; }
+        private List<WorldObject> inventory = new List<WorldObject>();
 
         private static Random random = new Random();
 
@@ -30,7 +33,7 @@ namespace Mandatory2DGameFramework.model.creatures.player
 
         public override void Loot(WorldObject obj)
         {
-            throw new NotImplementedException();
+            inventory.Add(obj);
         }
 
         public override void ReceiveHit(int hit)

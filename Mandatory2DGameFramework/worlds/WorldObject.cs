@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.worlds
 {
-    //TODO: XML Documentation
+    /// <summary>
+    /// Class for creating world objects
+    /// </summary>
     public class WorldObject
     {
         public string Name { get; set; }

@@ -1,4 +1,5 @@
-﻿using Mandatory2DGameFramework.model.attack;
+﻿using Mandatory2DGameFramework.logging;
+using Mandatory2DGameFramework.model.attack;
 using Mandatory2DGameFramework.model.creatures.monster;
 using Mandatory2DGameFramework.model.creatures.player;
 using System;
@@ -10,7 +11,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Mandatory2DGameFramework.model.creatures
 {
-    //TODO: XML Documentation
+    /// <summary>
+    /// Static class for creating creatures
+    /// </summary>
     public static class CreatureFactory
     {
         /// <summary>
@@ -31,6 +34,7 @@ namespace Mandatory2DGameFramework.model.creatures
                 case CreaturePlayer.Warlock:
                     return new Warlock(name);
                 default:
+                    MyLogger.Instance.LogError("Invalid creature type or missing player type");
                     throw new ArgumentException("Invalid creature type or missing monster type");
             }
         }
@@ -52,6 +56,7 @@ namespace Mandatory2DGameFramework.model.creatures
                 case CreatureMonster.Raptor:
                     return new Raptor();
                 default:
+                    MyLogger.Instance.LogError("Invalid creature type or missing player type");
                     throw new ArgumentException("Invalid creature type or missing monster type");
             }
         }
