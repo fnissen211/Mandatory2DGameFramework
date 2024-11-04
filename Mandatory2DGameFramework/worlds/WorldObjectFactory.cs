@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.worlds
 {
+    public enum ItemType
+    {
+        Attack,
+        Defence,
+        NonPlayer
+    }
     /// <summary>
     /// Factory class for creating WorldObjects
     /// </summary>
@@ -20,7 +26,7 @@ namespace Mandatory2DGameFramework.worlds
         /// <param name="x">Position X</param>
         /// <param name="y">Position Y</param>
         /// <returns>Returns a world object</returns>
-        public static WorldObject CreateWorldObject(string name, bool? lootable, bool? removeable, int x, int y)
+        public static WorldObject CreateWorldObject(string name, bool? lootable, bool? removeable, int x, int y, ItemType type)
         {
             WorldObject worldObject = new WorldObject();
             worldObject.Name = name;
@@ -28,6 +34,7 @@ namespace Mandatory2DGameFramework.worlds
             worldObject.Removeable = removeable ?? false;
             worldObject.X = x;
             worldObject.Y = y;
+            worldObject.Type = type;
             return worldObject;
         }
     }

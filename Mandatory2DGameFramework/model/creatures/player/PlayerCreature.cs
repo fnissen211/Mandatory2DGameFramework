@@ -16,7 +16,7 @@ namespace Mandatory2DGameFramework.model.creatures.player
     {
         public abstract AttackItem? Attack { get; set; }
         public abstract DefenceItem? Defence { get; set; }
-        private List<WorldObject> inventory = new List<WorldObject>();
+        public List<WorldObject> inventory = new List<WorldObject>();
 
         private static Random random = new Random();
 

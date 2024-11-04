@@ -136,8 +136,9 @@ namespace Mandatory2DGameFramework.xml_configuration
                 bool removeable = bool.Parse(worldObjectNode["Removeable"]?.InnerText ?? "false");
                 int x = int.Parse(worldObjectNode["X"]?.InnerText ?? "0");
                 int y = int.Parse(worldObjectNode["Y"]?.InnerText ?? "0");
+                ItemType type = (ItemType)Enum.Parse(typeof(ItemType), worldObjectNode["Type"]?.InnerText ?? "NonPlayer");
 
-                worldObjects.Add(WorldObjectFactory.CreateWorldObject(name, lootable, removeable, x, y));
+                worldObjects.Add(WorldObjectFactory.CreateWorldObject(name, lootable, removeable, x, y, type));
             }
             return worldObjects;
         }

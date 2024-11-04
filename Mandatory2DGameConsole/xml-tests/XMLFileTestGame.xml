@@ -56,6 +56,7 @@
 			<Name>Wall</Name>
 			<Lootable>false</Lootable>
 			<Removeable>false</Removeable>
+			<Type>NonPlayer</Type>
 			<X>10</X>
 			<Y>10</Y>
 		</worldObject>
@@ -64,6 +65,7 @@
 			<Name>Shield of Destiny</Name>
 			<Lootable>true</Lootable>
 			<Removeable>true</Removeable>
+			<Type>Defence</Type>
 			<X>14</X>
 			<Y>62</Y>
 		</worldObject>
@@ -72,6 +74,7 @@
 			<Name>Sword of Destiny</Name>
 			<Lootable>true</Lootable>
 			<Removeable>true</Removeable>
+			<Type>Attack</Type>
 			<X>62</X>
 			<Y>14</Y>
 		</worldObject>
@@ -107,12 +110,20 @@
 			<Receiver></Receiver>
 		</action>
 		<action>
+			<Attacker>Frederik</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
+			<Attacker>Frederik</Attacker>
+			<Receiver>Raptor</Receiver>
+		</action>
+		<action>
 			<Attacker>Peter Plys</Attacker>
 			<Receiver>Raptor</Receiver>
 		</action>
 		<action>
-			<Attacker>Raptor</Attacker>
-			<Receiver>Knud</Receiver>
+			<Player>Frederik</Player>
+			<WorldObject>Sword of Destiny</WorldObject>
 		</action>
 		<action>
 			<Attacker>Boar</Attacker>
@@ -125,10 +136,6 @@
 		<action>
 			<Attacker>Frederik</Attacker>
 			<Receiver>Raptor</Receiver>
-		</action>
-		<action>
-			<Player>Frederik</Player>
-			<WorldObject>Sword of Destiny</WorldObject>
 		</action>
 		<action>
 			<PlayerMove>Frederik</PlayerMove>

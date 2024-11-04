@@ -16,6 +16,8 @@ namespace Mandatory2DGameFramework.worlds
         public bool Removeable { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
+        public ItemType Type { get; set; }
+
 
         public WorldObject()
         {

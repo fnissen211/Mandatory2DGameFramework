@@ -23,7 +23,13 @@ namespace Mandatory2DGameFramework.model.creatures.player
 
         public override int Hit()
         {
-            return 10;
+            int baseDamage = 10;
+
+            int extraDamage = this.inventory?
+                .OfType<AttackItem>()
+                .Sum(item => item.Hit) ?? 0;
+
+            return baseDamage + extraDamage;
         }
 
         public override string ToString()
