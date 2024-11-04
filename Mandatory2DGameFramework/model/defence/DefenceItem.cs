@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.defence
 {
+    //TODO: XML Documentation
     public class DefenceItem:WorldObject
     {
         public string Name { get; set; }

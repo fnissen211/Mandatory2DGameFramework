@@ -2,6 +2,7 @@
 using Mandatory2DGameFramework.model.creatures;
 using Mandatory2DGameFramework.model.creatures.player;
 using Mandatory2DGameFramework.model.defence;
+using Mandatory2DGameFramework.worlds;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ using System.Xml;
 namespace Mandatory2DGameFramework.xml_configuration
 {
     //TODO: Implement the ReadXMLConfiguration class and make a gameconfiguration class
+    //TODO: XML Documentation
     public class ReadXMLConfiguration
     {
         /// <summary>
@@ -26,7 +28,9 @@ namespace Mandatory2DGameFramework.xml_configuration
             try
             {
                 configDoc.Load(path);
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 Console.WriteLine("Error reading XML file: " + ex.Message);
                 return null;
             }
@@ -91,7 +95,7 @@ namespace Mandatory2DGameFramework.xml_configuration
                 var defenceNode = creatureNode["Defence"];
                 DefenceItem? playerDefenceItem = null;
 
-                
+
                 if (defenceNode != null)
                 {
                     DefenceItem defenceItem = new DefenceItem
@@ -103,7 +107,7 @@ namespace Mandatory2DGameFramework.xml_configuration
                 }
 
                 PlayerCreature player = (PlayerCreature)CreatureFactory.CreateCreaturePlayer(playerClass, playerName);
-                
+
                 player.Attack = playerAttackItem;
                 player.Defence = playerDefenceItem;
 
@@ -112,5 +116,42 @@ namespace Mandatory2DGameFramework.xml_configuration
             return creatures;
         }
 
+        /// <summary>
+        /// Takes an xml document and parses the world objects from the XML document and return a list of world objects
+        /// </summary>
+        /// <param name="xmlDoc">An XML document</param>
+        /// <returns>A list of world objects</returns>
+        public List<WorldObject>? ParseWorldObjects(XmlDocument xmlDoc)
+        {
+            List<WorldObject> worldObjects = new List<WorldObject>();
+            XmlNodeList? worldObjectNodes = xmlDoc.SelectNodes("//worldObject");
+
+            foreach (XmlNode worldObjectNode in worldObjectNodes)
+            {
+                string? name = worldObjectNode["Name"]?.InnerText ?? "Unknown Object";
+                bool lootable = bool.Parse(worldObjectNode["Lootable"]?.InnerText ?? "false");
+                bool removeable = bool.Parse(worldObjectNode["Removeable"]?.InnerText ?? "false");
+                int x = int.Parse(worldObjectNode["X"]?.InnerText ?? "0");
+                int y = int.Parse(worldObjectNode["Y"]?.InnerText ?? "0");
+
+                worldObjects.Add(WorldObjectFactory.CreateWorldObject(name, lootable, removeable, x, y));
+            }
+            return worldObjects;
+        }
+
+        /// <summary>
+        /// Parses the world configuration from the XML document and returns the playing world
+        /// </summary>
+        /// <param name="xmlDoc">An XML document</param>
+        /// <returns>Returns the playing world</returns>
+        public World ParseWorldConfig(XmlDocument xmlDoc)
+        {
+            XmlNodeList worldNode = xmlDoc.SelectNodes("//world");
+
+            int maxX = int.Parse(worldNode[0]["MaxX"]?.InnerText ?? "0");
+            int maxY = int.Parse(worldNode[0]["MaxY"]?.InnerText ?? "0");
+            World world = new World(maxX, maxY);
+            return world;
+        }
     }
 }

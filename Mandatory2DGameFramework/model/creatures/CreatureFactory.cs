@@ -10,6 +10,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Mandatory2DGameFramework.model.creatures
 {
+    //TODO: XML Documentation
     public static class CreatureFactory
     {
         /// <summary>

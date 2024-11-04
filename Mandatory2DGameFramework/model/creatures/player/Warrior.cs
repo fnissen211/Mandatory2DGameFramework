@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures.player
 {
+    //TODO: XML Documentation
     public class Warrior : PlayerCreature
     {
         public override AttackItem? Attack { get; set; }
@@ -25,7 +26,7 @@ namespace Mandatory2DGameFramework.model.creatures.player
 
         public override string ToString()
         {
-            return $"Warrior Name: {Name}, HitPoints: {HitPoint}, Attack: {Attack?.Name ?? "None"}, Defence: {Defence?.Name ?? "None"}";
+            return $"Warrior Name: {Name}, HitPoints: {HitPoint}, Attack: {Attack?.Name ?? "None"}, Defence: {Defence?.Name ?? "None"}, Position: ({X},{Y})";
         }
     }
 }

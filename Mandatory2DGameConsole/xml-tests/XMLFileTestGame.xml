@@ -1,46 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<creatures>
-	<playerCreature>
-		<Name>Frederik</Name>
-		<Class>Warrior</Class>
-		<HitPoint>150</HitPoint>
-		<Defence>
-			<Name>Steel Shield</Name>
-			<ReduceHitPoint>30</ReduceHitPoint>
-		</Defence>
-	</playerCreature>
-	<playerCreature>
-		<Name>Knud</Name>
-		<Class>Mage</Class>
-		<HitPoint>150</HitPoint>
-		<Attack>
-			<Name>Staff</Name>
-			<Hit>10</Hit>
-			<Range>50</Range>
-		</Attack>
-	</playerCreature>
-	<playerCreature>
-		<Name>Svend</Name>
-		<Class>Warlock</Class>
-		<HitPoint>150</HitPoint>
-		<Attack>
-			<Name>Long Staff</Name>
-			<Hit>15</Hit>
-			<Range>30</Range>
-		</Attack>
-		<Defence>
-			<Name>Cloak</Name>
-			<ReduceHitPoint>10</ReduceHitPoint>
-		</Defence>
-	</playerCreature>
+<gameConfig>
+	<world>
+		<MaxX>100</MaxX>
+		<MaxY>100</MaxY>
+	</world>
 
-	<monsterCreature>
-		<Class>Raptor</Class>
-	</monsterCreature>
-	<monsterCreature>
-		<Class>Boar</Class>
-	</monsterCreature>
-	<monsterCreature>
-		<Class>Dragon</Class>
-	</monsterCreature>
-</creatures>
+	<creatures>
+		<playerCreature>
+			<Name>Frederik</Name>
+			<Class>Warrior</Class>
+			<HitPoint>150</HitPoint>
+			<Defence>
+				<Name>Steel Shield</Name>
+				<ReduceHitPoint>30</ReduceHitPoint>
+			</Defence>
+		</playerCreature>
+		<playerCreature>
+			<Name>Knud</Name>
+			<Class>Mage</Class>
+			<HitPoint>150</HitPoint>
+			<Attack>
+				<Name>Staff</Name>
+				<Hit>10</Hit>
+				<Range>50</Range>
+			</Attack>
+		</playerCreature>
+		<playerCreature>
+			<Name>Svend</Name>
+			<Class>Warlock</Class>
+			<HitPoint>150</HitPoint>
+			<Attack>
+				<Name>Long Staff</Name>
+				<Hit>15</Hit>
+				<Range>30</Range>
+			</Attack>
+			<Defence>
+				<Name>Cloak</Name>
+				<ReduceHitPoint>10</ReduceHitPoint>
+			</Defence>
+		</playerCreature>
+
+		<monsterCreature>
+			<Class>Raptor</Class>
+		</monsterCreature>
+		<monsterCreature>
+			<Class>Boar</Class>
+		</monsterCreature>
+		<monsterCreature>
+			<Class>Dragon</Class>
+		</monsterCreature>
+	</creatures>
+
+
+
+
+	<worldObjects>
+		<worldObject>
+			<Name>Wall</Name>
+			<Lootable>false</Lootable>
+			<Removeable>false</Removeable>
+			<X>10</X>
+			<Y>10</Y>
+		</worldObject>
+
+		<worldObject>
+			<Name>Shield of Destiny</Name>
+			<Lootable>true</Lootable>
+			<Removeable>true</Removeable>
+			<X>14</X>
+			<Y>62</Y>
+		</worldObject>
+
+		<worldObject>
+			<Name>Sword of Destiny</Name>
+			<Lootable>true</Lootable>
+			<Removeable>true</Removeable>
+			<X>62</X>
+			<Y>14</Y>
+		</worldObject>
+	</worldObjects>
+</gameConfig>

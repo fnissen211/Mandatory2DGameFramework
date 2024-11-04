@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Mandatory2DGameFramework.model.creatures.monster
 {
+    //TODO: XML Documentation
     public class Dragon : MonsterCreature
     {
         public Dragon() : base("Dragon", 150)
@@ -21,7 +22,7 @@ namespace Mandatory2DGameFramework.model.creatures.monster
 
         public override string ToString()
         {
-            return $"Monster Name: {Name}, HitPoints: {HitPoint}";
+            return $"Monster Name: {Name}, HitPoints: {HitPoint}, Position: ({X},{Y})";
         }
     }
 }

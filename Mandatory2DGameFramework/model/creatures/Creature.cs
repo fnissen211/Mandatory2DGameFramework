@@ -10,10 +10,13 @@ using System.Threading.Tasks;
 namespace Mandatory2DGameFramework.model.creatures
 {
     // TODO: Add creature position
+    //TODO: XML Documentation
     public abstract class Creature : ICreature
     {
         public string Name { get; set; }
         public int HitPoint { get; set; }
+        public int X { get; set; }
+        public int Y { get; set; }
 
         protected Creature(string name, int hitPoint)
         {
