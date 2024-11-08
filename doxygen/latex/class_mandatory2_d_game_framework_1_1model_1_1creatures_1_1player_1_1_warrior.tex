@@ -1,0 +1,102 @@
+\doxysection{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Warrior Class Reference}
+\hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior}{}\label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior}\index{Mandatory2DGameFramework.model.creatures.player.Warrior@{Mandatory2DGameFramework.model.creatures.player.Warrior}}
+
+
+\doxylink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior}{Warrior} class that inherits from \doxylink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature}{Player\+Creature}.  
+
+
+Inheritance diagram for Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Warrior\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_ada979c1179eb523b7671779e5c08dcde}\label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_ada979c1179eb523b7671779e5c08dcde} 
+{\bfseries Warrior} (string name)
+\item 
+override int \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_a21a62540d6c6861cdaeed3f05c79bb41}{Hit}} ()
+\item 
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_aa7b74cbe0d53ae2def440d6074d28971}\label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_aa7b74cbe0d53ae2def440d6074d28971} 
+override string {\bfseries To\+String} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Player\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Player\+Creature} (string name)
+\item 
+override int \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature_ab5f7a30a8b4578b506ff029477dd706c}{Hit}} ()
+\item 
+override void \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature_aa373299b708832e50e0201d0140d7b8a}{Loot}} (\mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world_object}{World\+Object}} obj)
+\begin{DoxyCompactList}\small\item\em Loot method that will be implemented in the subclasses, for looting the world object. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature_a0e7463403c19dfafc61e19689d152044}{Receive\+Hit}} (int hit)
+\begin{DoxyCompactList}\small\item\em A method that will be implemented in the subclasses, for receiving a hit from another creature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature_ac61563ba3f1f940822e629baa070e2a1}{Hit}} ()
+\begin{DoxyCompactList}\small\item\em An abstract method that will be implemented in the subclasses, for determining the hit points of the creature. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature_ac82af614e38e24c49dcfccb6fc368f98}{Move}} (bool? x, bool? y)
+\begin{DoxyCompactList}\small\item\em A method for moving the creature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_i_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+ICreature}}}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_a0dd970c4ff2f3f3298c16e4ffd423978}\label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_a0dd970c4ff2f3f3298c16e4ffd423978} 
+override? \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1attack_1_1_attack_item}{Attack\+Item}} {\bfseries Attack}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_a5269310f045c62d633dcc673602a1cc8}\label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_a5269310f045c62d633dcc673602a1cc8} 
+override? \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1defence_1_1_defence_item}{Defence\+Item}} {\bfseries Defence}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Player\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1attack_1_1_attack_item}{Attack\+Item}}? {\bfseries Attack}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1defence_1_1_defence_item}{Defence\+Item}}? {\bfseries Defence}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int {\bfseries Hit\+Point}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int {\bfseries X}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int {\bfseries Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Player\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world_object}{World\+Object}} $>$ {\bfseries inventory} = new List$<$\mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world_object}{World\+Object}}$>$()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Creature} (string name, int hit\+Point)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior}{Warrior} class that inherits from \doxylink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_player_creature}{Player\+Creature}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_a21a62540d6c6861cdaeed3f05c79bb41}\index{Mandatory2DGameFramework.model.creatures.player.Warrior@{Mandatory2DGameFramework.model.creatures.player.Warrior}!Hit@{Hit}}
+\index{Hit@{Hit}!Mandatory2DGameFramework.model.creatures.player.Warrior@{Mandatory2DGameFramework.model.creatures.player.Warrior}}
+\doxysubsubsection{\texorpdfstring{Hit()}{Hit()}}
+{\footnotesize\ttfamily \label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_warrior_a21a62540d6c6861cdaeed3f05c79bb41} 
+override int Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Warrior.\+Hit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_i_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+ICreature}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/\+Downloads/\+Mandatory2\+DGame\+Framework/\+Mandatory2\+DGame\+Framework/\+Mandatory2\+DGame\+Framework/model/creatures/player/Warrior.\+cs\end{DoxyCompactItemize}

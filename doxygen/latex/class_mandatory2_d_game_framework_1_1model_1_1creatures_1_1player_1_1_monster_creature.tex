@@ -1,0 +1,97 @@
+\doxysection{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Monster\+Creature Class Reference}
+\hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature}{}\label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature}\index{Mandatory2DGameFramework.model.creatures.player.MonsterCreature@{Mandatory2DGameFramework.model.creatures.player.MonsterCreature}}
+
+
+An abstract class for creating monster creatures.  
+
+
+Inheritance diagram for Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Monster\+Creature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.748634cm]{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a888ab8b18c8334d6be1daf5cc48b9091}\label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a888ab8b18c8334d6be1daf5cc48b9091} 
+{\bfseries Monster\+Creature} (string name, int hit\+Point)
+\item 
+override int \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a2d445f64b51aa5616a15c91f48d28ebc}{Hit}} ()
+\begin{DoxyCompactList}\small\item\em An abstract method that will be implemented in the subclasses, for determining the hit points of the creature. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a4926116bb509afd9f16f94674785a420}{Receive\+Hit}} (int hit)
+\begin{DoxyCompactList}\small\item\em A method that will be implemented in the subclasses, for receiving a hit from another creature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature_ac61563ba3f1f940822e629baa070e2a1}{Hit}} ()
+\begin{DoxyCompactList}\small\item\em An abstract method that will be implemented in the subclasses, for determining the hit points of the creature. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature_a31b39c00f40de5f7bb73a86a5bbdc1b6}{Loot}} (\mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world_object}{World\+Object}} obj)
+\begin{DoxyCompactList}\small\item\em Loot method that will be implemented in the subclasses, for looting the world object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature_ac82af614e38e24c49dcfccb6fc368f98}{Move}} (bool? x, bool? y)
+\begin{DoxyCompactList}\small\item\em A method for moving the creature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_i_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+ICreature}}}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Creature} (string name, int hit\+Point)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+Creature}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int {\bfseries Hit\+Point}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int {\bfseries X}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int {\bfseries Y}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract class for creating monster creatures. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a2d445f64b51aa5616a15c91f48d28ebc}\index{Mandatory2DGameFramework.model.creatures.player.MonsterCreature@{Mandatory2DGameFramework.model.creatures.player.MonsterCreature}!Hit@{Hit}}
+\index{Hit@{Hit}!Mandatory2DGameFramework.model.creatures.player.MonsterCreature@{Mandatory2DGameFramework.model.creatures.player.MonsterCreature}}
+\doxysubsubsection{\texorpdfstring{Hit()}{Hit()}}
+{\footnotesize\ttfamily \label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a2d445f64b51aa5616a15c91f48d28ebc} 
+override int Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Monster\+Creature.\+Hit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+An abstract method that will be implemented in the subclasses, for determining the hit points of the creature. 
+
+\begin{DoxyReturn}{Returns}
+Returns the hit value 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_i_creature}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+ICreature}}.
+
+\Hypertarget{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a4926116bb509afd9f16f94674785a420}\index{Mandatory2DGameFramework.model.creatures.player.MonsterCreature@{Mandatory2DGameFramework.model.creatures.player.MonsterCreature}!ReceiveHit@{ReceiveHit}}
+\index{ReceiveHit@{ReceiveHit}!Mandatory2DGameFramework.model.creatures.player.MonsterCreature@{Mandatory2DGameFramework.model.creatures.player.MonsterCreature}}
+\doxysubsubsection{\texorpdfstring{ReceiveHit()}{ReceiveHit()}}
+{\footnotesize\ttfamily \label{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1player_1_1_monster_creature_a4926116bb509afd9f16f94674785a420} 
+override void Mandatory2\+DGame\+Framework.\+model.\+creatures.\+player.\+Monster\+Creature.\+Receive\+Hit (\begin{DoxyParamCaption}\item[{int}]{hit}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+A method that will be implemented in the subclasses, for receiving a hit from another creature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hit} & An integer that is the value of the hit\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature_a4252ca6ee839ba64ce545eeb961c71b5}{Mandatory2\+DGame\+Framework.\+model.\+creatures.\+Creature}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/\+Downloads/\+Mandatory2\+DGame\+Framework/\+Mandatory2\+DGame\+Framework/\+Mandatory2\+DGame\+Framework/model/creatures/monster/Monster\+Creature.\+cs\end{DoxyCompactItemize}

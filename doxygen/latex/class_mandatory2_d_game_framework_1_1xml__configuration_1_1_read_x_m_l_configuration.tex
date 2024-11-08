@@ -1,0 +1,101 @@
+\doxysection{Mandatory2\+DGame\+Framework.\+xml\+\_\+configuration.\+Read\+XMLConfiguration Class Reference}
+\hypertarget{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration}{}\label{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration}\index{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}}
+
+
+Class for reading an XML configuration file.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Xml\+Document? \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a7c87a836dfe154fd7e5209afe22253df}{Read\+XMLDocument}} (string path)
+\begin{DoxyCompactList}\small\item\em Reads an XML file from a given path and returns an XML document. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Creature}} $>$? \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a7e615396eccb85ed880ead505bf653dc}{Parse\+Creatures}} (Xml\+Document xml\+Doc)
+\begin{DoxyCompactList}\small\item\em Takes an xml document and parses the creatures from the XML document and return a list of creatures. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world_object}{World\+Object}} $>$? \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a03a2a61929f629d09e98b664b1371f53}{Parse\+World\+Objects}} (Xml\+Document xml\+Doc)
+\begin{DoxyCompactList}\small\item\em Takes an xml document and parses the world objects from the XML document and return a list of world objects. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world}{World}} \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a3e32d1384a74888800311aa217f25cc5}{Parse\+World\+Config}} (Xml\+Document xml\+Doc)
+\begin{DoxyCompactList}\small\item\em Parses the world configuration from the XML document and returns the playing world. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for reading an XML configuration file. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a7e615396eccb85ed880ead505bf653dc}\index{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}!ParseCreatures@{ParseCreatures}}
+\index{ParseCreatures@{ParseCreatures}!Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}}
+\doxysubsubsection{\texorpdfstring{ParseCreatures()}{ParseCreatures()}}
+{\footnotesize\ttfamily \label{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a7e615396eccb85ed880ead505bf653dc} 
+List$<$ \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1model_1_1creatures_1_1_creature}{Creature}} $>$? Mandatory2\+DGame\+Framework.\+xml\+\_\+configuration.\+Read\+XMLConfiguration.\+Parse\+Creatures (\begin{DoxyParamCaption}\item[{Xml\+Document}]{xml\+Doc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Takes an xml document and parses the creatures from the XML document and return a list of creatures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & An XML document\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of creatures
+\end{DoxyReturn}
+\Hypertarget{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a3e32d1384a74888800311aa217f25cc5}\index{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}!ParseWorldConfig@{ParseWorldConfig}}
+\index{ParseWorldConfig@{ParseWorldConfig}!Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}}
+\doxysubsubsection{\texorpdfstring{ParseWorldConfig()}{ParseWorldConfig()}}
+{\footnotesize\ttfamily \label{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a3e32d1384a74888800311aa217f25cc5} 
+\mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world}{World}} Mandatory2\+DGame\+Framework.\+xml\+\_\+configuration.\+Read\+XMLConfiguration.\+Parse\+World\+Config (\begin{DoxyParamCaption}\item[{Xml\+Document}]{xml\+Doc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parses the world configuration from the XML document and returns the playing world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & An XML document\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the playing world
+\end{DoxyReturn}
+\Hypertarget{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a03a2a61929f629d09e98b664b1371f53}\index{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}!ParseWorldObjects@{ParseWorldObjects}}
+\index{ParseWorldObjects@{ParseWorldObjects}!Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}}
+\doxysubsubsection{\texorpdfstring{ParseWorldObjects()}{ParseWorldObjects()}}
+{\footnotesize\ttfamily \label{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a03a2a61929f629d09e98b664b1371f53} 
+List$<$ \mbox{\hyperlink{class_mandatory2_d_game_framework_1_1worlds_1_1_world_object}{World\+Object}} $>$? Mandatory2\+DGame\+Framework.\+xml\+\_\+configuration.\+Read\+XMLConfiguration.\+Parse\+World\+Objects (\begin{DoxyParamCaption}\item[{Xml\+Document}]{xml\+Doc}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Takes an xml document and parses the world objects from the XML document and return a list of world objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xml\+Doc} & An XML document\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of world objects
+\end{DoxyReturn}
+\Hypertarget{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a7c87a836dfe154fd7e5209afe22253df}\index{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}!ReadXMLDocument@{ReadXMLDocument}}
+\index{ReadXMLDocument@{ReadXMLDocument}!Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration@{Mandatory2DGameFramework.xml\_configuration.ReadXMLConfiguration}}
+\doxysubsubsection{\texorpdfstring{ReadXMLDocument()}{ReadXMLDocument()}}
+{\footnotesize\ttfamily \label{class_mandatory2_d_game_framework_1_1xml__configuration_1_1_read_x_m_l_configuration_a7c87a836dfe154fd7e5209afe22253df} 
+Xml\+Document? Mandatory2\+DGame\+Framework.\+xml\+\_\+configuration.\+Read\+XMLConfiguration.\+Read\+XMLDocument (\begin{DoxyParamCaption}\item[{string}]{path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads an XML file from a given path and returns an XML document. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & The path where the file that will be read lies.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the path-\/file to a XMLDocument or null if it wasn\textquotesingle{}t a XMLDocument
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Administrator/\+Downloads/\+Mandatory2\+DGame\+Framework/\+Mandatory2\+DGame\+Framework/\+Mandatory2\+DGame\+Framework/xml-\/configuration/Read\+XMLConfiguration.\+cs\end{DoxyCompactItemize}
